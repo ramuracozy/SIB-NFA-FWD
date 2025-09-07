@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Online</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #fafafa;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .caption {
+            text-align: center;
+            font-size: 0.95em;
+            margin-top: 8px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galeri</h1>
+    <div class="gallery">
+        <div>
+            <a href="https://i.pinimg.com/1200x/4a/2c/7f/4a2c7f4cd743678a3f8309755c42d484.jpg" target="_blank">
+                <img src="https://i.pinimg.com/1200x/4a/2c/7f/4a2c7f4cd743678a3f8309755c42d484.jpg" alt="Pinterest 1">
+            </a>
+            <div class="caption">High School in Jakarta</div>
+        </div>
+        <div>
+            <a href="https://i.pinimg.com/736x/20/b7/2c/20b72c7cafdd598f49b7cc7f14d7895d.jpg" target="_blank">
+                <img src="https://i.pinimg.com/736x/20/b7/2c/20b72c7cafdd598f49b7cc7f14d7895d.jpg" alt="Pinterest 2">
+            </a>
+            <div class="caption">Dead Pool</div>
+        </div>
+        <div>
+            <a href="https://i.pinimg.com/1200x/49/47/76/494776ccf362b4d4940420d3f520b2ad.jpg" target="_blank">
+                <img src="https://i.pinimg.com/1200x/49/47/76/494776ccf362b4d4940420d3f520b2ad.jpg" alt="Pinterest 3">
+            </a>
+            <div class="caption">Sore</div>
+        </div>
+        <div>
+            <a href="https://i.pinimg.com/1200x/86/6b/fa/866bfab473f10d87eeeb4aaf0b574d67.jpg" target="_blank">
+                <img src="https://i.pinimg.com/1200x/86/6b/fa/866bfab473f10d87eeeb4aaf0b574d67.jpg" alt="Pinterest 4">
+            </a>
+            <div class="caption">Cars 2</div>
+        </div>
+    </div>
+</body>
+</html>
