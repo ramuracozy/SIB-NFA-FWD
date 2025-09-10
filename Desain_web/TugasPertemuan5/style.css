@@ -1,0 +1,177 @@
+header {
+    border: 1px solid black;
+    text-align: center;
+    margin: 10px 0;
+    padding: 20px 0;
+    background: darkblue;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: whitesmoke;
+    letter-spacing: 2px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: whitesmoke;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+nav {
+    border: 1px solid black;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0;
+    background: #f8f8ff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #222;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1.1em;
+}
+
+footer{
+    border: 1px solid black;
+    text-align: center;
+    margin: 10px 0;
+    padding: 20px 0;
+}
+
+.container{
+    width: 800px;
+    margin: auto;
+}
+
+.content{
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+aside{
+    flex: 1;
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px 0;
+    color: yellowgreen;
+    font-size: 1em;
+}
+aside h2 {
+    color: #228B22;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+aside .quote {
+    font-style: italic;
+    color: #555;
+    background: #f4f8ec;
+    border-left: 4px solid #b3d17b;
+    margin: 10px 20px;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+aside .quote-author {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.95em;
+    color: #228B22;
+}
+
+aside .quote-tip {
+    margin: 15px 20px 0 20px;
+    color: #333;
+    background: #f8f8ff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 1em;
+    border-left: 4px solid #1976d2;
+}
+
+.hobi-list {
+    list-style: disc inside;
+    text-align: left;
+    margin: 0 30px 15px 30px;
+    padding: 0;
+    color: #228B22;
+    font-size: 1em;
+}
+
+.hobi-list li {
+    margin-bottom: 8px;
+}
+
+main {
+    flex: 2;
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px 0;
+    color: #222;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fafafa;
+}
+
+.main-title {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.main-subtitle {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #eee;
+    margin: 20px 0;
+    background: #f5f5f5;
+}
+
+.main-name {
+    font-size: 1em;
+    font-weight: 700;
+    margin: 10px 0 8px 0;
+    color: #222;
+}
+
+.main-info {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #1976d2;
+    font-weight: 600;
+}

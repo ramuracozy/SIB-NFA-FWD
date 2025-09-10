@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #CCCCCC;
+            color: #333333;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #F3F3F3;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 24px 24px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        p {
+            text-align: center;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+        }
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #e0e0e0;
+        }
+        .info {
+            text-align: center;
+        }
+        .info strong {
+            color: #2a7ae4;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px 8px;
+            }
+            h1 { font-size: 1.5em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat Datang</h1>
+        <p>Di website untuk tugas Desain Web.</p>
+        <div class="profile">
+            <img src="takeshi ramura chibi.png" alt="Foto Profil" class="profile-img">
+            <div class="info">
+                <h2>Raka Muhammad Rabbani</h2>
+                <p>
+                    Mahasiswa <strong>STT Terpadu Nurul Fikri</strong><br>
+                    Program Studi Teknik Informatika
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
