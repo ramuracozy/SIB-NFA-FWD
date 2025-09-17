@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tugas Pertemuan 6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <style>
+        h1 { text-align: center; }
+        ul { list-style-type: none; }
+        li { margin: 10px 0;}
+        li a { color: rgb(0, 0, 0); text-decoration: none; }
+    </style>
+  <body>
+    <!-- Header --> 
+        <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="https://yt3.googleusercontent.com/dlUm7wCT2LQADCC0O3TcjNsxq8LlVIRczFwD9-fI0YuR9fRY3ef2JtcylvB2-qTNszlr6MqMvQ=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+        <img src="https://yt3.googleusercontent.com/wAGRHmqqsHosT-0a7jCjxA1uIWqiVi9WtmH7YoKz0hzw_1uoOskdPpS_q82Z74dcuv2eBqCM=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+        <img src="https://yt3.googleusercontent.com/y4oPXiJ_jKZMVtg6keWT6AoZFhw_Ej42BwejPI34goZXF_uSi7qMtzMU84kCR61gxKCJRjTTqzs=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+<!-- Navbar/ Navigation Section -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="sttnf.png" alt="Bootstrap" width="30" height="30">
+      </a>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.html" target="mainframe">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="MyStudy.html" target="mainframe">My Study</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="galeri.html" target="mainframe">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="DataTables.html" target="mainframe">Data Tables</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-flex">
+        <a href="login.html" target="mainframe" class="btn btn-outline-primary me-2">Login</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+<!-- Content Section -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+      <fieldset>
+        <legend>Web Nurul Fikri</legend>
+        <ul>
+            <li><a href="https://elena.nurulfikri.ac.id/" target="_blank">ELENA Nurul Fikri</a></li>
+            <li><a href="https://lisa.nurulfikri.ac.id/login" target="_blank">LISA Nurul Fikri</a></li>
+            <li><a href="https://siska.nurulfikri.ac.id/gate/login" target="_blank">SISKA Nurul Fikri</a></li>
+            <li><a href="https://learning.nfacademy.id/my/" target="_blank">LMS NF Academy</a></li>
+            <li><a href="https://sinufia.nfacademy.id/peserta" target="_blank">SINUFIA NF Acamdey</a></li>
+        </ul>
+      </fieldset>
+		</div>
+		<div class="col-md-8">
+        <iframe width="100%" height="100%" id="main-iframe" name="mainframe" src="Home.html"></iframe>
+		</div>
+	</div>
+</div>
+
+<!-- Footer Section -->
+<footer class="py-3 my-4">
+        <h4 class="nav justify-content-center border-bottom pb-3 mb-3"> Tugas Pertemuan 6 - Desain Web</h4>
+        <p class="text-center text-body-secondary">&copy; 2025 Raka Muhammad Rabbani</p>
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
