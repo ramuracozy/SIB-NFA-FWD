@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Pegawai Dinamis</title>
+</head>
+<body>
+  <h2>Input Data Pegawai</h2>
+
+  <!-- Form Input -->
+  <form id="formPegawai">
+    <label>Nama: </label>
+    <input type="text" id="nama" required><br><br>
+
+    <label>Umur: </label>
+    <input type="number" id="umur" required><br><br>
+
+    <label>Jabatan: </label>
+    <select id="jabatan" required>
+      <option value="">-- Pilih Jabatan --</option>
+      <option value="Manager">Manager</option>
+      <option value="Asisten Manager">Asisten Manager</option>
+      <option value="Staff">Staff</option>
+    </select><br><br>
+
+    <label>Status: </label>
+    <select id="status" required>
+      <option value="">-- Pilih Status --</option>
+      <option value="Menikah">Menikah</option>
+      <option value="Belum Menikah">Belum Menikah</option>
+    </select><br><br>
+
+    <button type="submit">Cetak Data Pegawai</button>
+  </form>
+
+  <hr>
+
+  <h2>Data Pegawai</h2>
+  <table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Nama Pegawai</th>
+        <th>Umur</th>
+        <th>Jabatan</th>
+        <th>Status</th>
+        <th>Gaji Pokok</th>
+        <th>Tunjangan Jabatan</th>
+        <th>BPJS</th>
+        <th>Tunjangan Keluarga</th>
+      </tr>
+    </thead>
+    <tbody id="IsiTabel"></tbody>
+    <tfoot id="TotalGaji"></tfoot>
+  </table>
+
+  <script>
+    document.getElementById("formPegawai").addEventListener("submit", function(e) {
+      e.preventDefault(); // cegah reload
+
+      // Ambil input
+      let nama = document.getElementById("nama").value;
+      let umur = document.getElementById("umur").value;
+      let jabatan = document.getElementById("jabatan").value;
+      let status = document.getElementById("status").value;
+
+      // Tentukan gaji pokok berdasarkan jabatan
+      let gapok = 0;
+      if (jabatan === "Manager") gapok = 15000000;
+      else if (jabatan === "Asisten Manager") gapok = 10000000;
+      else if (jabatan === "Staff") gapok = 5000000;
+
+      // Hitungan lainnya
+      let tunjanganJabatan = 0.15 * gapok;
+      let bpjs = 0.10 * gapok;
+      let tunjanganKeluarga = (status === "Menikah") ? 0.20 * gapok : 0;
+      let totalGaji = gapok + tunjanganJabatan + bpjs + tunjanganKeluarga;
+
+      // Masukkan ke tabel
+      document.getElementById("IsiTabel").innerHTML = `
+        <tr>
+          <td>${nama}</td>
+          <td>${umur} Tahun</td>
+          <td>${jabatan}</td>
+          <td>${status}</td>
+          <td>${gapok.toLocaleString("id-ID")}</td>
+          <td>${tunjanganJabatan.toLocaleString("id-ID")}</td>
+          <td>${bpjs.toLocaleString("id-ID")}</td>
+          <td>${tunjanganKeluarga.toLocaleString("id-ID")}</td>
+        </tr>
+      `;
+
+      document.getElementById("TotalGaji").innerHTML = `
+        <tr>
+          <td colspan="7"><b>Total Gaji</b></td>
+          <td><b>${totalGaji.toLocaleString("id-ID")}</b></td>
+        </tr>
+      `;
+    });
+  </script>
+</body>
+</html>
