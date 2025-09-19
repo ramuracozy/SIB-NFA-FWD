@@ -15,6 +15,7 @@
     <label>Umur: </label>
     <input type="number" id="umur" required><br><br>
 
+    <!-- Dropdown untuk memilih jabatan -->
     <label>Jabatan: </label>
     <select id="jabatan" required>
       <option value="">-- Pilih Jabatan --</option>
@@ -23,6 +24,7 @@
       <option value="Staff">Staff</option>
     </select><br><br>
 
+    <!-- Dropdown untuk memilih status -->
     <label>Status: </label>
     <select id="status" required>
       <option value="">-- Pilih Status --</option>
@@ -57,7 +59,7 @@
     document.getElementById("formPegawai").addEventListener("submit", function(e) {
       e.preventDefault(); // cegah reload
 
-      // Ambil input
+      // Mengambil input dari form
       let nama = document.getElementById("nama").value;
       let umur = document.getElementById("umur").value;
       let jabatan = document.getElementById("jabatan").value;
@@ -69,13 +71,13 @@
       else if (jabatan === "Asisten Manager") gapok = 10000000;
       else if (jabatan === "Staff") gapok = 5000000;
 
-      // Hitungan lainnya
+      // Hitungan tunjangan, bpjs, tunjangan keluarga, dan total gaji
       let tunjanganJabatan = 0.15 * gapok;
       let bpjs = 0.10 * gapok;
       let tunjanganKeluarga = (status === "Menikah") ? 0.20 * gapok : 0;
       let totalGaji = gapok + tunjanganJabatan + bpjs + tunjanganKeluarga;
 
-      // Masukkan ke tabel
+      // Menampilkan data di tabel dengan format rupiah
       document.getElementById("IsiTabel").innerHTML = `
         <tr>
           <td>${nama}</td>
