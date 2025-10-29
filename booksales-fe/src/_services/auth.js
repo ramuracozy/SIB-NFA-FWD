@@ -26,18 +26,26 @@ export const login = async ({ email, password }) => {
   }
 }
 
-export const logout = async ({ token }) => {
+export const logout = async () => {
   try {
-    const { data } = await API.post('/logout', { token }, {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('accessToken')}`
-      }
-    })
-    localStorage.removeItem('accessToken')
-    return data
+    const token = localStorage.getItem('accessToken');
+    if (token) {
+      await API.post('/logout', { token }, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+    }
+    // Hapus semua data autentikasi dari localStorage
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('userInfo');
+    return { success: true };
   } catch (error) {
     console.log(error);
-    throw error
+    // Tetap hapus data lokal meskipun API gagal
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('userInfo');
+    throw error;
   }
 }
 

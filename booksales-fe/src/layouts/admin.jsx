@@ -21,12 +21,13 @@ const userInfo = userInfoRaw ? JSON.parse(userInfoRaw) : null;
   }, [token, decodedData, userInfo, navigate])
 
   const handleLogout = async () => {
-    if (token) {
-      await logout({ token });
-      localStorage.removeItem("userInfo");
-      localStorage.removeItem("accessToken");
+    try {
+      await logout();
+      navigate("/");
+    } catch (error) {
+      console.error("Logout error:", error);
+      navigate("/");
     }
-    navigate("/login");
   }
 
   return (

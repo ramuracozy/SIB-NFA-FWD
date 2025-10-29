@@ -16,6 +16,7 @@ import BookEdit from './pages/admin/books/edit';
 import ShowBook from './pages/public/books/show';
 import AuthorEdit from './pages/admin/authors/edit';
 import GenreEdit from './pages/admin/genres/edit';
+import AdminTransactions from './pages/admin/transactions';
 
 function App() {
   return (
@@ -57,6 +58,9 @@ function App() {
               <Route path="edit/:id" element={<GenreEdit />} />
             </Route>
 
+            <Route path='transactions'>
+              <Route index element={<AdminTransactions />} />
+            </Route>
 
           </Route>
 
